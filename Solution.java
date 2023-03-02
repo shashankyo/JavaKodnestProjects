@@ -1,35 +1,19 @@
-package hackeranagram;
+package hackerRankBiginteger;
 
-import java.util.Arrays;
+import java.math.BigDecimal;
+import java.util.Scanner;
 
 public class Solution {
 public static void main(String[] args) {
-	boolean flag = true;
-	String str1 = "earth";
-	char[] charArray = str1.toCharArray();
-	Arrays.sort(charArray);
-
+	Scanner scan = new Scanner(System.in);
+	System.out.println("Enter number-1");
+	BigDecimal a = scan.nextBigDecimal();
+	System.out.println(a);
 	
-	String str2 = "na";
-	char[] charArray2 = str2.toCharArray();
-	Arrays.sort(charArray2);
-	
-	flag = true;
-	if (charArray.length == charArray2.length)
-	{
-		for(int i=0;i<str1.length();i++)
-			{
-			if(charArray[i]!=charArray2[i])
-			{
-				flag = false;
-			}
-		}
-	}
-	if(flag == true)
-	{
-		System.out.println("Anagram");
-	}else{
-		System.out.println("Not a Anagram");
-	}
+	System.out.println("Enter number-2");
+	BigDecimal b = scan.nextBigDecimal();
+	System.out.println(b);
+	System.out.println(a.add(b));
+	System.out.println(a.multiply(b));
 }
 }
