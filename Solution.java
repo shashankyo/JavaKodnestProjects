@@ -1,19 +1,30 @@
-package hackerRankBiginteger;
+package sortWordsinSentence;
 
-import java.math.BigDecimal;
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class Solution {
 public static void main(String[] args) {
-	Scanner scan = new Scanner(System.in);
-	System.out.println("Enter number-1");
-	BigDecimal a = scan.nextBigDecimal();
-	System.out.println(a);
-	
-	System.out.println("Enter number-2");
-	BigDecimal b = scan.nextBigDecimal();
-	System.out.println(b);
-	System.out.println(a.add(b));
-	System.out.println(a.multiply(b));
+	String str = "sentence";
+	char []ch =str.toCharArray();
+//	Arrays.sort(ch);
+//	for(char i : ch)
+//	{
+//		System.out.println(i);
+//	}
+	char temp;
+	for (int i = 0;i<ch.length;i++)
+	{
+		for(int j = i+1; j< ch.length;j++){
+			if (ch[i] > ch [j])
+			{
+				temp = ch[i];
+				ch[i] = ch[j];
+				ch[j] = temp;
+			}
+		}
+	}
+	for (char c : ch){
+		System.out.println(c);
+	}
 }
 }
