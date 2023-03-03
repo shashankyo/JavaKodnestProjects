@@ -1,30 +1,20 @@
-package sortWordsinSentence;
+package divisorSum;
 
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class Solution {
 public static void main(String[] args) {
-	String str = "sentence";
-	char []ch =str.toCharArray();
-//	Arrays.sort(ch);
-//	for(char i : ch)
-//	{
-//		System.out.println(i);
-//	}
-	char temp;
-	for (int i = 0;i<ch.length;i++)
+	System.out.println("Enter the number");
+	Scanner scan = new Scanner(System.in);
+	int num = scan.nextInt();
+	int sum = 0;
+	for(int i=1;i<=num;i++)
 	{
-		for(int j = i+1; j< ch.length;j++){
-			if (ch[i] > ch [j])
-			{
-				temp = ch[i];
-				ch[i] = ch[j];
-				ch[j] = temp;
-			}
+		if(num%i==0)
+		{
+			sum = sum + i;
 		}
 	}
-	for (char c : ch){
-		System.out.println(c);
-	}
+	System.out.println("sum is "+sum);
 }
 }
