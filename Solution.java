@@ -1,20 +1,19 @@
-package divisorSum;
-
-import java.util.Scanner;
+package floydsTriangle;
 
 public class Solution {
 public static void main(String[] args) {
-	System.out.println("Enter the number");
-	Scanner scan = new Scanner(System.in);
-	int num = scan.nextInt();
-	int sum = 0;
-	for(int i=1;i<=num;i++)
-	{
-		if(num%i==0)
-		{
-			sum = sum + i;
-		}
-	}
-	System.out.println("sum is "+sum);
+	int n = 5;
+
+    int i, j, k = 1;
+
+    for (i = 1; i <= n; i++) {
+
+        for (j = 1; j <= i; j++) {
+
+            System.out.print(k + "  ");
+            k++;
+        }
+        System.out.println();
+    }
 }
 }
