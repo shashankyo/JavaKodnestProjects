@@ -1,28 +1,23 @@
-package com.kodnest.Reverse;
+package standardCode;
+
+import java.util.Scanner;
 
 public class Program {
 public static void main(String[] args) {
-	String str = "KNOWLEDGE";
-//	char ch[] = str.toCharArray();
-//	String a ="";
-//	for(int i=str.length()-1;i>=0;i--)
-//	{
-//		a = a+ str.charAt(i);
-//	}
-//	System.out.println(a);
-//	
-	char ch[] = str.toCharArray();
-	String a ="";
-	for(int i=str.length()-5;i>=0;i--)
+	System.out.println("Enter array length");
+	Scanner scan  = new Scanner(System.in);
+	int n = scan.nextInt();
+	int array[] = new int[n];
+	System.out.println("Enter array elements");
+	for(int i=0;i<array.length;i++)
 	{
-		a = a+ str.charAt(i);
+		 array[i] = scan.nextInt(); 
 	}
-//	System.out.println(a);
-	String b = a;
-	for(int i=5;i<str.length();i++)
+	System.out.println("Entered array elements are:");
+	for(int i=0;i<array.length;i++)
 	{
-		b = b + str.charAt(i);
+		System.out.println(array[i]);
 	}
-	System.out.println(b);
+	scan.close();
 }
 }
