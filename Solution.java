@@ -1,16 +1,25 @@
-package swapFirstLast;
-
-import java.util.Scanner;
+package recursionExitzero;
 
 public class Solution {
+	static int count = 0;
 public static void main(String[] args) {
-	System.out.println("ENter a string");
-	Scanner scan =  new Scanner(System.in);
-	String str = scan.next();
-	char ch[] = str.toCharArray();
-	char temp =ch[0];
-	ch[0] = ch[ch.length-1];
-	ch[ch.length-1] = temp;
-	System.out.println(ch);
+	
+	display();
+}
+
+private static void display() {
+	
+	count ++;
+	if(count <= 5)
+	{
+		System.out.println("Hello Weekend");
+		display();
+		;
+	}
+	else
+	{
+		System.exit(0);
+	}
+	
 }
 }
