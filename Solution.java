@@ -1,20 +1,19 @@
-package hashInReverse;
-
-import java.util.Scanner;
+package divisionpair;
 
 public class Solution {
 public static void main(String[] args) {
-	System.out.println("Enter number");
-	Scanner scan = new Scanner(System.in);
-	int n = scan.nextInt();
-	for(int i=0;i<n;i++)
+	int a[] = {1,2,3,4,5,6};
+	int count =0;
+	for(int i=0;i<a.length;i++)
 	{
-		for(int j=n-1;j>=i;j--)
+		for(int j=i+1;j<a.length;j++)
 		{
-			System.out.print("#");
+			if(a[i] + a[j] == 5)
+			{
+				count++;
+			}
 		}
-		System.out.println(" ");
 	}
-	
+	System.out.println(count);
 }
 }
