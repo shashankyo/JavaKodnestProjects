@@ -1,24 +1,19 @@
-package recursionExitzero;
+package hashInReverse;
+
+import java.util.Scanner;
 
 public class Solution {
-	static int count = 0;
 public static void main(String[] args) {
-	
-	display();
-}
-
-private static void display() {
-	
-	count ++;
-	if(count <= 5)
+	System.out.println("Enter number");
+	Scanner scan = new Scanner(System.in);
+	int n = scan.nextInt();
+	for(int i=0;i<n;i++)
 	{
-		System.out.println("Hello Weekend");
-		display();
-		;
-	}
-	else
-	{
-		System.exit(0);
+		for(int j=n-1;j>=i;j--)
+		{
+			System.out.print("#");
+		}
+		System.out.println(" ");
 	}
 	
 }
