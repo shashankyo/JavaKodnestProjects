@@ -1,12 +1,17 @@
-package factorialwithRec;
+package gradeSetter;
+
+import java.util.Scanner;
 
 public class Solution {
 public static void main(String[] args) {
-	int factorial = 0;
-	System.out.println(factorial(6));
-}
-
-private static int factorial(int n) {
-	return (n==0)?1:(n * factorial(n-1));
+	System.out.println("Please enter the grade");
+	Scanner scan = new Scanner(System.in);
+	int grade = scan.nextInt();
+	if (grade >= 37 && grade % 5 > 2) {
+	       grade += 5 - (grade % 5);
+	    } else {
+	        grade = grade;
+	    }
+	System.out.println(grade);
 }
 }
